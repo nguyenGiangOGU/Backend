@@ -4,18 +4,15 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Users', [{
       email: 'admin@gmail.com',
-      password:'123456', //plain text cdafafadfsaf=>hash password nâng cao mức độ bảo mật cho tk
+      password: '123456', //plain text cdafafadfsaf=>hash password nâng cao mức độ bảo mật cho tk
       firstName: 'Nguyen',
       lastName: 'Doe',
-      address: 'VN' ,
-      gender : 1,
-      typeRole: 'ROLE',
-      keyRole: 'R1',
+      address: 'VN',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
   },
-// up chạy bình thường thêm dữ liệu vào
+  // up chạy bình thường thêm dữ liệu vào
   down: async (queryInterface, Sequelize) => {
     /**
      * Add commands to revert seed here.
