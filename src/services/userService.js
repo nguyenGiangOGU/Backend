@@ -97,7 +97,21 @@ let getAllUsers = (userId) => {
     })
 }
 
+let getAllCodeService = () => {
+    return new Promise(async(resolve, reject) => {
+        try {
+            let res = {};
+            let allcode = await db.Allcode.findAll();
+            res.errCode=0;
+            res.data= allcode;
+            resolve(data);
+        } catch (e) {
+            reject(e) 
+        }
+    })
+}
 module.exports = {
     handelUserLogin : handelUserLogin,
-    getAllUsers : getAllUsers
+    getAllUsers : getAllUsers,
+    getAllCodeService: getAllCodeService
 }

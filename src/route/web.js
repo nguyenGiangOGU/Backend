@@ -25,7 +25,11 @@ let initWebRoutes = (app) => {
     router.delete('/user/:id', userController.deleteUser)
     // Update 1 user
     router.put('/user', userController.updateUser)
+
+    router.get('/allcode',userController.getAllCode);
     return app.use("/", router);
+
+    
 
 
 }

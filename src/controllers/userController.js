@@ -58,6 +58,21 @@ const updateUser = async (req, res) => {
     const result = await usersAdmin.updateUserData(req.body)
     return res.json(result)
 }
+
+const getAllCode= async (req, res) =>{
+    try {
+        let data= await userService.getAllCodeService();
+        return res.status(200).json(data);
+    } catch (e) {
+        console.log('get all code error',e);
+        return res.status(200).json({
+            errCode:-1,
+            errMessage: 'Error from server'
+    })
+}
+}
+
+
 module.exports = {
     handleLogin: handleLogin,
     handleGetAllUsers: handleGetAllUsers.apply,
@@ -66,5 +81,6 @@ module.exports = {
     createUser: createUser,
     getUserById: getUserById,
     deleteUser: deleteUser,
-    updateUser: updateUser
+    updateUser: updateUser,
+    getAllCode: getAllCode,
 }

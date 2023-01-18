@@ -1,10 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "nguyenthanhtung",
+    "password": "root",
     "database": "hoidanit",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "host": "127.0.0.1", 
+    "dialect": "mysql", 
     "query": {
       "raw": true
     },
